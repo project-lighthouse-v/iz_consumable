@@ -86,9 +86,10 @@ local function showControls(itemConfig)
     lib.showTextUI(('[E]  %s\n[X]  Put away'):format(slow.useLabel or 'Consume'), {
         position = 'bottom-center',
         style = {
-        borderRadius = 0,
-        backgroundColor = '#48BB78',
-        color = 'white'
+            borderRadius = 0,
+            backgroundColor = '#48BB78',
+            color = 'white'
+        }
     })
 end
 
