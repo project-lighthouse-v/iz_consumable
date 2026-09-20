@@ -108,6 +108,32 @@ bean_coffee = {
 }
 ```
 
+Configuration also need to be added to ox `items.lua`.
+
+```lua
+['bean_coffee'] = {
+        label = 'A Cup of Coffee',
+        weight = 300,
+        stack = false,
+        durability = true,
+        consume = 1,
+        client = {
+            export = 'iz_consumable.useNormally'
+        },
+        buttons = {
+            {
+                label = 'Drink coffee slowly',
+                action = function(slot)
+                    TriggerEvent(
+                        'iz_consumable:client:useSlowly',
+                        slot
+                    )
+                end
+            }
+        }
+    }
+```
+
 ### Config values
 
 - `status`: QBox status values restored when consumed
