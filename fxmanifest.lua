@@ -9,11 +9,16 @@ version '1.0.0'
 
 shared_scripts {
     '@ox_lib/init.lua',
-    'config.lua'
+    'config/config.lua'
 }
 
-client_script 'client.lua'
-server_script 'server.lua'
+server_scripts {
+    'server/server.lua'
+}
+
+client_scripts {
+    'client/client.lua'
+}
 
 dependencies {
     'ox_lib',
